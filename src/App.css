@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /* primary-colors */
+  --primary-cyan: hsl(180, 66%, 49%);
+  --primary-dark-violet: hsl(257, 27%, 26%);
+  /* secondary-colors */
+  --secondary-red: hsl(0, 87%, 67%);
+  /* neutral-colors */
+  --neutral-gray: hsl(0, 0%, 75%);
+  --neutral-grayish-violet: hsl(257, 7%, 63%);
+  --neutral-very-dark-blue: hsl(255, 11%, 22%);
+  --neutral-very-dark-violet: hsl(260, 8%, 14%);
+  /* typography*/
+  --font-size: 18px;
+  /* --family: [Poppins](https://fonts.google.com/specimen/Poppins) */
+  /* --weights: 500, 700 */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  padding: 0 5vw;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border: 2px solid red;
+}
+
+.App-header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 4vh 0 6vh;
+}
+
+.App-header-nav  {
+  opacity: 0;
+  position: absolute;
+}
+
+/* hero-section */
+
+.App-hero-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hero-content-action {
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.hero-content-action h1 {
+  font-size: 10vw;
+}
+
+.hero-content-action h4 {
+  padding-top: 2vh;
+}
+
+.hero-content-button {
+  padding-top: 3vh;
+}
+
+.hero-content-button button {
+  border: none;
+  background-color: var(--primary-cyan);
+  border-radius: 50px;
+  color: whitesmoke;
+  font-size: 6vw;
+  font-weight: 600;
+  padding: 2vh 6vw;
+}
+
+.hero-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* input-section */
+
+.App-input-link-content {
+  /* border: 2px solid red; */
+  padding: 3vh 0;
+}
+
+.link-content {
+  background: rgb(43, 95, 78);
+  border-radius: 10px;
+}
+
+.link-content form {
+  /* border: 2px solid blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2vh 6vw;
 }
 
-.App-link {
-  color: #61dafb;
+.link-content.input, .link-content.button  {
+  width: 100%;
+  height: 7vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link-content input, .link-content button  {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.link-content.button {
+  margin-top: 2vh;
+}
+
+.link-content button {
+  border: none;
+  background-color: var(--primary-cyan);
+  color: whitesmoke;
+  font-size: 6vw;
+  font-weight: 600;
+  padding: 2vh 6vw;  
+}
+
+/* statistics section*/
+.App-statistics-content {
+  text-align: center;
+}
+
+.statistics-content-title {
+  padding-top: 5vh;
+}
+
+.statistics-content-title p {
+  padding-top: 2vh;
 }
