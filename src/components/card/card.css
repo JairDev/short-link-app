@@ -1,0 +1,44 @@
+.statistics-card {
+  /* border: 2px solid red; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14vh;
+  position: relative;
+}
+
+.statistics-card div:not(div:first-child) {
+  /* border: 2px solid blue; */
+  /* margin-top: 8vh; */
+  /* padding: 0 4vw; */
+}
+
+.statistics-card div:last-child {
+  /* border: 2px solid blue; */
+  /* margin-top: 4vh; */
+}
+.statistics-card-img {
+  /* border: 2px solid green; */
+  background-color: rgb(66, 66, 104);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -40px;
+}
+
+.wrapper-card-text {
+  padding: 8vh 4vw 4vh;
+}
+
+.wrapper-card-text div {
+  padding-top: 2vh;
+}
+.statistics-card-title h5 {
+  color: var(--neutral-very-dark-blue);
+  font-size: 6vw;
+}

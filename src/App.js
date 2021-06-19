@@ -1,14 +1,26 @@
 import "./App.css";
-import logo from "./assets/logo.svg"
-import heroImg from "./assets/illustration-working.svg"
+import logo from "./assets/logo.svg";
+import heroImg from "./assets/illustration-working.svg";
+import imgBrand from "./assets/icon-brand-recognition.svg";
+import imgDetailed from "./assets/icon-detailed-records.svg";
+import imgFully from "./assets/icon-fully-customizable.svg";
+import iconFacebook from "./assets/icon-facebook.svg";
+import iconTwitter from "./assets/icon-twitter.svg";
+import iconPinterest from "./assets/icon-pinterest.svg";
+import iconInstagram from "./assets/icon-instagram.svg";
+import Card from "./components/card/card";
+import data from "./cardData.json";
+
+const srcImages = [imgBrand, imgDetailed, imgFully];
+const socialICons = [iconFacebook, iconTwitter, iconPinterest, iconInstagram];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header padding-content">
         <div className="App-header-content">
           <div className="App-header-logo">
-            <img src={logo} alt="Company logotype"/>
+            <img src={logo} alt="Company logotype" />
           </div>
           <nav className="App-header-nav">
             <ul>
@@ -17,22 +29,26 @@ function App() {
                 <li>Pricing</li>
                 <li>Resources</li>
               </div>
-              <div className="nav-links-sessions">
+              <div className="nav-links-session">
                 <li>Login</li>
-                <li>Sign Up</li>
+                <li>
+                  <div className="nav-content-button">
+                    <form>
+                      <button>Sign Up</button>
+                    </form>
+                  </div>
+                </li>
               </div>
             </ul>
           </nav>
-          <div className="header-hamburger-icon">
-            ham
-          </div>
+          <div className="header-hamburger-icon">ham</div>
         </div>
       </header>
 
       <section className="App-hero-content">
         <div className="hero-content-action">
           <h1>More than just shorter links</h1>
-          <h4>
+          <h4 className="text-gray">
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </h4>
@@ -42,49 +58,46 @@ function App() {
             </form>
           </div>
         </div>
-        <div className="hero-content-img">
+        <div className="hero-content-img padding-content">
           <img src={heroImg} alt="Person in front of a desk" />
         </div>
       </section>
 
-      <section className="App-input-link-content">
+      <section className="App-input-link-content padding-content">
         <div className="link-content">
           <form>
             <div className="link-content input">
-              <input />
+              <input placeholder="Shorten a link here..." />
             </div>
             <div className="link-content button">
               <button>Shorten It!</button>
             </div>
           </form>
         </div>
+        <div className="result-short-link"></div>
       </section>
 
-      <section className="App-statistics-content">
+      <section className="App-statistics-content padding-content">
         <div className="statistics-content-title">
-          
           <h2>Advanced Statistic</h2>
-          <p>
+          <h4 className="text-gray">
             Track how your links are performing across the web with our advanced
             statistics dashboard.
-          </p>
+          </h4>
         </div>
         <div className="statistics-content-cards">
-          <div className="statistics-card">
-            <div className="statistics-card-img">
-              <img src="" alt="" />
-            </div>
-            <div className="statistics-card-title">
-              <h5>Brand Recognition</h5>
-            </div>
-            <div className="statistics-card-text">
-              <p>
-                Boost your brand recognition with each click. Generic links
-                don’t mean a thing. Branded links help instil confidence in your
-                content.
-              </p>
-            </div>
-          </div>
+          {data.cards.map((card, i) => {
+            const path = srcImages[i];
+            return (
+              <Card
+                key={card.title}
+                imgSrc={path}
+                cardTitle={card.title}
+                cardSubTitle={card.subTitle}
+                altText={card.altText}
+              />
+            );
+          })}
         </div>
       </section>
 
@@ -124,7 +137,9 @@ function App() {
               </ul>
             </nav>
             <div className="footer-content-social-media">
-
+              {socialICons.map((icon) => (
+                <img key={icon} src={icon} alt={icon}></img>
+              ))}
             </div>
           </div>
         </div>

@@ -1,0 +1,38 @@
+
+{
+  "cards": [
+    {
+      "title": "Brand Recognition",
+      "subTitle": "Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.",
+      "srcImg": "imgBrand",
+      "altText": ""
+    },
+    {
+      "title": "Detailed Records",
+      "subTitle": "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.",
+      "srcImg": "imgDetailed",
+      "altText": ""
+    },
+    {
+      "title": "Fully Customizable",
+      "subTitle": "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
+      "srcImg": "imgFully",
+      "altText": ""
+    }
+  ],
+
+  "social": [
+    {
+      "svgSocial": "icon-facebook"
+    },
+    {
+      "svgSocial": "icon-instagram"
+    },
+    {
+      "svgSocial": "icon-facebook"
+    },
+    {
+      "svgSocial": "icon-facebook"
+    }
+  ]
+}
