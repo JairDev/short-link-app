@@ -8,13 +8,39 @@ import iconFacebook from "./assets/icon-facebook.svg";
 import iconTwitter from "./assets/icon-twitter.svg";
 import iconPinterest from "./assets/icon-pinterest.svg";
 import iconInstagram from "./assets/icon-instagram.svg";
+import menu from "./assets/menu_icon.svg";
+import iconClose from "./assets/close_icon.svg";
 import Card from "./components/card/card";
 import data from "./cardData.json";
+import { useEffect, useRef } from "react";
 
 const srcImages = [imgBrand, imgDetailed, imgFully];
 const socialICons = [iconFacebook, iconTwitter, iconPinterest, iconInstagram];
 
 function App() {
+  let showNav = false;
+  const refNav = useRef(null);
+  const refIconClose = useRef(null)
+  const refIconHamburger = useRef(null)
+
+  useEffect(() => {
+    // console.log(refNav)
+  }, []);
+
+  const handleClickMenu = (e) => {
+    // console.log(refNav)
+    showNav = !showNav;
+    // console.log(showNav);
+    if (showNav) {
+      refNav.current.classList.add("show");
+      refIconHamburger.current.classList.add("hidden");
+      refIconClose.current.classList.add("show");
+    } else {
+      refNav.current.classList.remove("show");
+      refIconHamburger.current.classList.remove("hidden");
+      refIconClose.current.classList.remove("show");
+    }
+  };
   return (
     <div className="App">
       <header className="App-header padding-content">
@@ -22,7 +48,7 @@ function App() {
           <div className="App-header-logo">
             <img src={logo} alt="Company logotype" />
           </div>
-          <nav className="App-header-nav">
+          <nav ref={refNav} className="App-header-nav">
             <ul>
               <div className="nav-links">
                 <li>Features</li>
@@ -41,7 +67,14 @@ function App() {
               </div>
             </ul>
           </nav>
-          <div className="header-hamburger-icon">ham</div>
+          <div onClick={handleClickMenu} className="header-menu-icon">
+            <div ref={refIconHamburger} className="header-menu-hamburger">
+              <img src={menu} alt=""></img>
+            </div>
+            <div ref={refIconClose} className="header-menu-close">
+              <img src={iconClose} alt=""></img>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -58,13 +91,13 @@ function App() {
             </form>
           </div>
         </div>
-        <div className="hero-content-img padding-content">
+        <div className="hero-content-img">
           <img src={heroImg} alt="Person in front of a desk" />
         </div>
       </section>
 
       <section className="App-input-link-content padding-content">
-        <div className="link-content">
+        <div className="link-content-short">
           <form>
             <div className="link-content input">
               <input placeholder="Shorten a link here..." />

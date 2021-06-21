@@ -11,7 +11,7 @@ function Card({ imgSrc, cardTitle, cardSubTitle, altText }) {
           <h5>{cardTitle}</h5>
         </div>
         <div className="statistics-card-text">
-          <h4 className="text-gray">{cardSubTitle}</h4>
+          <p className="text-gray">{cardSubTitle}</p>
         </div>
       </div>
     </div>
