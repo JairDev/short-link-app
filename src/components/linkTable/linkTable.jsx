@@ -44,5 +44,4 @@ function LinkTable() {
     </div>
   );
 }
-
 export default LinkTable;
