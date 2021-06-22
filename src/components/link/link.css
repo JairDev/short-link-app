@@ -1,0 +1,10 @@
+.content-link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-short-link {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}

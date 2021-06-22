@@ -1,0 +1,15 @@
+.App-input-link-content {
+  margin-top: 12vh;
+  position: relative;
+}
+
+.App-input-link-content::before {
+  content: "";
+  background-color: var(--neutral-grayish-violet-light);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+}

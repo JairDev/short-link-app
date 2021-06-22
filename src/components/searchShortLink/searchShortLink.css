@@ -1,0 +1,71 @@
+.link-content-short {
+  background: url("../../assets/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-dark-violet);
+  border-radius: 10px;
+  padding: 2vh 6vw;
+  position: relative;
+  z-index: 5;
+}
+
+.link-content-short form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-content.input,
+.link-content.button {
+  width: 100%;
+  height: 7vh;
+}
+
+.link-content input,
+.link-content button {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.link-content input {
+  font-size: 18px;
+  padding-left: 2vw;
+}
+
+.link-content.button {
+  margin-top: 2vh;
+}
+
+.link-content button {
+  border: none;
+  background-color: var(--primary-cyan);
+  color: whitesmoke;
+  font-size: calc(1vw + 0.5em);
+  font-weight: 600;
+  padding: 2vh 6vw;
+}
+
+@media only screen and (min-width: 768px) /* (min-device-width: 768px) and (max-device-width: 1024px) { */ {
+  .link-content-short {
+    padding: 6vh 6vw;
+  }
+
+  .link-content-short form {
+    flex-direction: row;
+  }
+
+  .link-content.input {
+    width: 100%;
+  }
+
+  .link-content.button {
+    margin-top: 0;
+    padding: 0 2vw;
+    width: 35%;
+  }
+
+  .link-content.button button {
+    padding: 0;
+  }
+}

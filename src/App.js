@@ -13,6 +13,7 @@ import iconClose from "./assets/close_icon.svg";
 import Card from "./components/card/card";
 import data from "./cardData.json";
 import { useEffect, useRef } from "react";
+import ShortLinkTable from "./components/shortLinkTable/shortLinkTable";
 
 const srcImages = [imgBrand, imgDetailed, imgFully];
 const socialICons = [iconFacebook, iconTwitter, iconPinterest, iconInstagram];
@@ -96,7 +97,7 @@ function App() {
         </div>
       </section>
 
-      <section className="App-input-link-content padding-content">
+      {/* <section className="App-input-link-content padding-content">
         <div className="link-content-short">
           <form>
             <div className="link-content input">
@@ -108,7 +109,9 @@ function App() {
           </form>
         </div>
         <div className="result-short-link"></div>
-      </section>
+      </section> */}
+
+      <ShortLinkTable/>
 
       <section className="App-statistics-content padding-content">
         <div className="statistics-content-title">
